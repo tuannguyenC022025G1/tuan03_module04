@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animation Example</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                let div = $("div");
+                div.animate({ left: '250px' }, "slow");
+                div.animate({ fontSize: '50px' }, "slow");
+            });
+        });
+    </script>
+    <style>
+        div {
+            background: #98bf21;
+            height: 100px;
+            width: 200px;
+            position: absolute;
+            line-height: 100px;
+            text-align: center;
+            color: white;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+<button>Start Animation</button>
+<p>Lưu ý: Phải đặt thuộc tính `position` là `relative`, `absolute` hoặc `fixed` để phần tử có thể di chuyển được bằng animate.</p>
+<div>HELLO</div>
+</body>
+</html>
